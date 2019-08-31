@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>到首页</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <span id="timeout">5</span>秒后跳转页面。。。。
+</p>
+
+<script>
+    //1.定义方法
+    var timeout = document.getElementById("timeout");
+    var num =  5;
+    function timeDec() {
+        num --;
+        if (num <= 0){
+            location.href = "http://baidu.com";
+        }
+        timeout.innerHTML = num  + "";
+    }
+
+    //2.设置定时器
+    setInterval(timeDec,1000);
+</script>
+</body>
+</html>

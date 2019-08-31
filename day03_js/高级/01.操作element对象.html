@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作element对象</title>
+</head>
+<body>
+
+<img src="img/off.gif" id="light">
+<h2 id="name">马云</h2>
+
+<script>
+    var img = document.getElementById("light");
+    alert("我要换图片了");
+    img.src="img/on.gif";//改变属性
+
+    var name = document.getElementById("name");
+    alert("我要换名字了");
+    name.innerHTML="雷军";//改变标签体内容
+</script>
+</body>
+</html>

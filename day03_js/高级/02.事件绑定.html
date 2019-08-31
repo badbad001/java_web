@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+</head>
+<body>
+   <img src="img/off.gif" id="light" onclick="alert('点我')">
+   <img src="img/off.gif" id="light2">
+<script>
+   var light = document.getElementById("light2");
+   light.onclick = function () {
+       alert("点我");
+   }
+</script>
+</body>
+</html>

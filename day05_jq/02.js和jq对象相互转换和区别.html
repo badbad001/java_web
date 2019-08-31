@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02.js和jq对象相互转换和区别</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div>
+    abc
+</div>
+<div>
+    abc
+</div>
+
+   <script>
+       //区别
+       var divs = document.getElementsByTagName("div");
+       for (var i = 0; i < divs.length; i++) {
+           divs[i].innerHTML = "oooo";
+           var $1 = $(divs[i]);
+           $1.html("ccc");
+       }
+
+
+       var $divs = $("div");
+       $divs.html("iiii");
+       //转换
+       //1.js转jq
+       //2.jq转js
+       var div1 = $divs[1];
+       div1.innerHTML = "qqq";
+   </script>
+
+</body>
+</html>

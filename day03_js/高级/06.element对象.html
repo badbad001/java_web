@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>element对象</title>
+    <script>
+        onload =function () {
+            var a = document.getElementsByTagName("a")[0];
+
+            document.getElementById("btn1").onclick = function () {
+                a.setAttribute("href","https://www.baidu.com");
+            }
+
+            document.getElementById("btn2").onclick = function () {
+                a.removeAttribute("href");
+            }
+        }
+    </script>
+</head>
+<body>
+<a>点我试试</a>
+<input type="button" id="btn1" value="设置属性">
+<input type="button" id="btn2" value="移除属性">
+
+<script>
+
+</script>
+</body>
+</html>

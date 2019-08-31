@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+        div{
+            border: 1px solid red;
+            width: 50px;
+        }
+        .div1{
+            width: 200px;
+            height: 200px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .div2{
+            width: 100px;
+            height: 100px;
+            /*margin: 50px;*/
+        }
+        .div3{
+            float: left;
+        }
+        .div4{
+            float: left;
+        }
+        .div5{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+   <div class="div1">
+       <div class="div2">
+
+       </div>
+   </div>
+
+   <div class="div3">aaa</div>
+   <div class="div4">bbb</div>
+   <div class="div5">ccc</div>
+</body>
+</html>

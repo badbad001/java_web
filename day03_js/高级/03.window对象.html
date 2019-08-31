@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03.window对象_弹出方法</title>
+</head>
+<body>
+   <input id="openBtn" type="button" value="打开">
+
+   <input id="closeBtn" type="button" value="关闭">
+
+<script>
+    //1.弹出方法
+  /*  var confirm = confirm("你确认要删除吗");
+    if (confirm){
+        alert("删除成功");
+    } else {
+        alert("取消删除")
+    }
+
+    var username = prompt("请输入用户名");
+    document.write(username);*/
+
+  //2.打开关闭方法
+  /*  var openBtn = document.getElementById("openBtn");
+    var closeBtn = document.getElementById("closeBtn");
+    var newWindown;
+    openBtn.onclick = function () {
+        newWindown = open("http://baidu.com");
+    }
+
+    closeBtn.onclick = function () {
+        newWindown.close();
+    }*/
+
+  //3.定时器方法
+    var timeout = setTimeout(fun,2000);
+    clearTimeout(timeout);
+    function fun() {
+        document.write("雷军");
+    }
+    setInterval(fun,1000);
+
+
+</script>
+</body>
+</html>
