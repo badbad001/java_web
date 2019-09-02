@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <script>
+        window.onload = function () {
+            document.getElementById("checkCode").onclick = function () {
+                var time = new Date().getTime();//获取事件戳来欺骗浏览器，不去找缓存
+
+                this.src = "/day10/checkCode?"+time;
+            }
+        }
+    </script>
+</head>
+<body>
+<img src="/day10/checkCode" id="checkCode">
+</body>
+</html>
