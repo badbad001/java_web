@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检验用户名是否可用</title>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script>
+        $(function () {
+            $("#form").validate({
+                rules:{
+                    username:{
+                        required: true,
+                        remote: {
+                            url: "checkUserName",     //后台处理程序
+                            type: "post",               //数据发送方式
+                            dataType: "json"           //接受数据格式
+                        }
+                    }
+                },
+                messages:{
+                    username:{
+                        required: "名字必填",
+                        remote: "名字太守欢迎"
+                    }
+                }
+
+            })
+        })
+    </script>
+</head>
+<body>
+<form action="checkUserName" method="post" id="form">
+    <div>
+        <input type="text" placeholder="用户名" name="username">
+    </div>
+    <div>
+        <input type="submit" value="登录">
+    </div>
+
+</form>
+
+
+</body>
+</html>

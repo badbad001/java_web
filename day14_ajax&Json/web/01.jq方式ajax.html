@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$.ajax</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:"ajaxDemo1",
+                data:{username:'雷军'},
+                type:"post",
+                success:function (rtn) {
+                    alert(rtn);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>
