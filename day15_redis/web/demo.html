@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>省份</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $.ajax({
+                url:"findAll",
+                data:{},
+                type:"get",
+                dateType:"json",
+                success:function (rtn) {
+                    var province = $("#province");
+
+                    $(rtn).each(function (index,ele) {
+                        var option = "<option id='"+ele.id+"'>"+ele.name+"</option>";
+                        province.append(option);
+                    })
+
+
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<select id="province">
+    <option>-请选择-</option>
+</select>
+</body>
+</html>
